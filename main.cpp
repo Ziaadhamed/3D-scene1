@@ -13,7 +13,7 @@ GLboolean amb=true, spec=true, dif=true;
 GLfloat x = -16;
 GLfloat y = 20;
 GLfloat z = -40;
-
+// new commit 
 // Velocity of the ball
 float vx = 0.1f;
 float vy = 0.1f;
