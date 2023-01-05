@@ -123,7 +123,7 @@ static void resize(int width, int height)
  void drawRedBookWithWhitePages() {
     // Set the color to red
     glColor3f(1.0, 0.0, 0.0);
-
+    //new commit 4
     // Draw the front cover of the book
     glBegin(GL_POLYGON);
     glVertex3f(-0.5, -0.5, 0.5);
