@@ -145,7 +145,7 @@ static void resize(int width, int height)
 
     // Set the color to red
     glColor3f(1.0, 0.0, 0.0);
-
+     //new commit 9
     // Draw the sides of the book
     glBegin(GL_QUADS);
     glVertex3f(-0.5, -0.5, 0.5);
