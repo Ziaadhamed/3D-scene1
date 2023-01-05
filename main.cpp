@@ -23,7 +23,7 @@ float vz = 0.1f;
 float ax = 0.0f;
 float ay = -0.001f;
 float az = 0.0f;
-
+// new commit 3
 // Radius of the ball
 float radius = 0.1f;
 
