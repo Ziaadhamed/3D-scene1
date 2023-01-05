@@ -312,6 +312,7 @@ void table()
 ///////////function to draw a chair//////////
 void chair()
 {
+    // new commit 5
 /////////upper_base///////////
     glPushMatrix();
     glPushMatrix();
