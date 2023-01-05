@@ -185,6 +185,7 @@ void drawSphere(float radius)
 }
 void drawSnowman()
 {
+    //new commit 6
     // Draw the bottom sphere
     glPushMatrix();
     glTranslatef(-20,6,30);
