@@ -418,7 +418,7 @@ void nine_full_set_chair_table()
 void closet()
 {
     glPushMatrix();
-
+    // new commit 10
     glPushMatrix();  //main_box
     glScalef(8,15,5);
     glTranslatef(-1,-1,-1);
