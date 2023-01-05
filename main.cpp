@@ -1,3 +1,4 @@
+////this code is what i discussed in the project
 #include <GL/gl.h>
 #include <GL/glu.h>
 #include <GL/glut.h>
@@ -120,62 +121,7 @@ static void resize(int width, int height)
     glViewport(0, 0, width, width / ar);
 }
  /////////drawing the floor with scaling and translation with the help of function cube/////////
- void drawRedBookWithWhitePages() {
-    // Set the color to red
-    glColor3f(1.0, 0.0, 0.0);
-    //new commit 4
-    // Draw the front cover of the book
-    glBegin(GL_POLYGON);
-    glVertex3f(-0.5, -0.5, 0.5);
-    glVertex3f(0.5, -0.5, 0.5);
-    glVertex3f(0.5, 0.5, 0.5);
-    glVertex3f(-0.5, 0.5, 0.5);
-    glEnd();
-
-    // Set the color to white
-    glColor3f(1.0, 1.0, 1.0);
-
-    // Draw the back cover of the book
-    glBegin(GL_POLYGON);
-    glVertex3f(-0.5, -0.5, -0.5);
-    glVertex3f(0.5, -0.5, -0.5);
-    glVertex3f(0.5, 0.5, -0.5);
-    glVertex3f(-0.5, 0.5, -0.5);
-    glEnd();
-
-    // Set the color to red
-    glColor3f(1.0, 0.0, 0.0);
-     //new commit 9
-    // Draw the sides of the book
-    glBegin(GL_QUADS);
-    glVertex3f(-0.5, -0.5, 0.5);
-    glVertex3f(-0.5, 0.5, 0.5);
-    glVertex3f(-0.5, 0.5, -0.5);
-    glVertex3f(-0.5, -0.5, -0.5);
-    glEnd();
-
-    glBegin(GL_QUADS);
-    glVertex3f(0.5, -0.5, 0.5);
-    glVertex3f(0.5, 0.5, 0.5);
-    glVertex3f(0.5, 0.5, -0.5);
-    glVertex3f(0.5, -0.5, -0.5);
-    glEnd();
-
-    glBegin(GL_QUADS);
-    glVertex3f(-0.5, 0.5, 0.5);
-    glVertex3f(0.5, 0.5, 0.5);
-    glVertex3f(0.5, 0.5, -0.5);
-    glVertex3f(-0.5, 0.5, -0.5);
-    glEnd();
-
-    glBegin(GL_QUADS);
-    glVertex3f(-0.5, -0.5, 0.5);
-    glVertex3f(0.5, -0.5, 0.5);
-    glVertex3f(0.5, -0.5, -0.5);
-    glVertex3f(-0.5, -0.5, -0.5);
-    glEnd();
-}
-
+ 
 void drawSphere(float radius)
 {
     const int slices = 32;
@@ -883,7 +829,7 @@ void display(void)
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(eyeX,eyeY,eyeZ, lookX,lookY,lookZ, 0,1,0); //eyeX,eyeY,eyeZ //5,10,-20
+    gluLookAt(eyeX,eyeY,eyeZ, lookX,lookY,lookZ, 0,1,0); //eyeX,eyeY,eyeZ
     glRotatef(theta,axis_x,axis_y,0);
 
     // Draw the snowman
@@ -891,7 +837,6 @@ void display(void)
     anothersnowman();
     light();
     classRoom();
-    drawRedBookWithWhitePages();
     drawBall();
     updateBall();
     glutSwapBuffers();
@@ -913,7 +858,7 @@ void myKeyboardFunc( unsigned char key, int x, int y )
     case '+': //zoom in
         eyeZ++;
         lookZ++;
-    case 'y': //zoom in
+    case 'y': //fan going down
         updatefan();
         break;
     case '-': //zoom out
